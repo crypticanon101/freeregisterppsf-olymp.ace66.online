@@ -1,0 +1,386 @@
+/*
+
+1. Add your custom Css styles below
+2. Place the this code in your template:
+
+ <link href="css/custom.css" rel="stylesheet">
+
+*/
+
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+    background-color: none;
+    background-size: 100%, 100%, 100%;
+    overflow-x: hidden;
+}
+
+input::placeholder,
+input {
+    font-family: 'Montserrat';
+    font-size: 13px;
+    color: rgba(123, 123, 123, 1);
+    font-weight: 500;
+}
+
+@keyframes zoom-in-out {
+    0%   { transform: scale(1   , 1   ); }
+    50%  { transform: scale(1.05, 1.05); }
+    100% { transform: scale(1   , 1   ); }
+}
+@keyframes floating135 {
+    0%   { transform: translate(   0,  0px); }
+    50%  { transform: translate(25px, 25px); }
+    100% { transform: translate(   0, -0px); }
+}
+@keyframes floating225 {
+    0%   { transform: translate(    0,  0px); }
+    50%  { transform: translate(-25px, 25px); }
+    100% { transform: translate(    0, -0px); }
+}
+@keyframes specialcase {
+    0%   { transform: translate(    0,  0px); opacity: 0.2; }
+    50%  { transform: translate(-25px, 25px); opacity:   1; }
+    100% { transform: translate(    0, -0px); opacity: 0.2; }
+}
+
+.container {
+    max-width: 2560px;
+}
+
+.floating135, .floating225, .specialcase {
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.specialcase { animation-name: specialcase; }
+.floating135 { animation-name: floating135; }
+.floating225 { animation-name: floating225; }
+
+.desktop {
+    display: inherit;
+}
+.mobile {
+    display: none;
+}
+
+.top-bg,
+.mid-bg,
+.btm-bg,
+.phone-bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.btn-claim {
+    width: 100%;
+    border: none;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    background: linear-gradient(#ea2d21, #b92020, #620606);
+    border-radius: 6px;
+}
+.btn-claim:hover {
+    transform: scale(1, 1);
+    transition: all .2s ease-in-out;
+}
+.btn-claim:active {
+    transform: scale(0.95, 0.95);
+    transition: all .2s ease-in-out;
+}
+.btn-claim:not(:hover) {
+    animation: zoom-in-out 1s ease-in infinite;
+}
+
+.claim-form {
+    position: absolute;
+    border: 3px solid #FFDF6D;
+    border-radius: 20px;
+    background: rgba(28, 28, 28, 1);
+    /* background: radial-gradient(circle, #F6E7BD 0%, #F6E7BD 35%, #DFC783 100%); */
+    z-index: 10;
+}
+.claim-form .text03 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.2;
+}
+.claim-form .text03b {
+    font-family: 'Poppins';
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.2;
+    margin-bottom: 4% !important;
+}
+.claim-form .text04,
+.claim-form .text04-border {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    line-height: 0.8;
+    margin-bottom: 4% !important;
+}
+.claim-form .text04 {
+    background: rgba(255, 223, 109, 1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 2;
+}
+.claim-form .form-container input,
+.claim-form .form-container select {
+    margin-bottom: 2%;
+}
+.claim-form .form-container .err-msg-container {
+    margin: 0 auto;
+    width: 99%;
+}
+.claim-form .form-container #refresh {
+    display: inline-block;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.claim-form .form-container #back {
+    display: table;
+    margin: 0 auto 10px auto;
+    font-family: 'Trajan Pro', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.top-bg {
+    /* padding: 20px 0; */
+    background-image: var(--desktop-top);
+}
+.top-bg .title-logo {
+    margin-bottom: -30px;
+}
+.top-bg .text01 {
+    color: white;
+    font-family:'Poppins';
+    font-weight: bold;
+    white-space: nowrap;
+}
+.top-bg .text02 {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    vertical-align: text-top;
+    line-height: initial;
+    color: #fff;
+    text-shadow: 1px 1.5px 0 #000, -1px 1.5px 0 #000;
+}
+.top-bg .bp-logo {
+    right: -7%;
+    bottom: 0%;
+}
+.top-bg .logo-col {
+    max-height: 100%;
+}
+.top-bg .pp-logo {
+    top: 14%;
+    left: -7%;
+}
+.top-bg .text-apng {
+    top: 49%;
+    right: 12%;
+}
+
+
+
+.mid-bg {
+    margin: -80px 0;
+    padding: 140px 0 20px 0;
+    background-image: var(--desktop-mid);
+    z-index: 2;
+}
+.mid-bg .text01,
+.mid-bg .text03 {
+    font-family: 'Poppins';
+    font-weight: bold;
+    color: #fff;
+    line-height: 1.5;
+}
+.mid-bg .text02,
+.mid-bg .text02-border {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-weight: 700;
+    line-height: 0.9;
+}
+.mid-bg .text02 {
+    position: inherit;
+    background: rgba(255, 223, 109, 1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 2;
+}
+.mid-bg .text04,
+.mid-bg .text05 {
+    font-family: 'Poppins';
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+.mid-bg .phone-bg {
+    margin: auto;
+    background-image: var(--phone-frame);
+}
+.mid-bg .btn-claim {
+    padding: 0px 0px;
+    font-family: 'Poppins';
+    border: none;
+    text-align: center;
+    color: rgba(46, 28, 2, 1);
+    font-weight: 600;
+    background: linear-gradient(#fee88c, #eeaf23);
+    border-radius: 6px;
+    display: inline-block;
+}
+
+
+.btm-bg {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    background-image: var(--desktop-btm);
+    overflow: hidden;
+    z-index: 0;
+}
+.btm-bg .text01 {
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0px 10px 9px rgba(0,0,0,0.2);
+}
+.btm-bg .text01 span {
+    font-weight: 700;
+    background: rgba(255, 223, 109, 1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 10px 9px rgba(0,0,0,0.2);
+}
+.btm-bg .text02 {
+    color: #fff;
+    padding: 10px;
+    font-weight: 600;
+}
+.btm-bg .winners .wrapper {
+    margin: 3px 8px;
+    padding: 8px;
+    display: inline-block;
+    background: radial-gradient(ellipse farthest-corner at center center, #FFF500 50%, #F6B300 100%);
+}
+.btm-bg .winners .info {
+    color: #fff;
+    text-transform: uppercase;
+    background: linear-gradient(to left, #620606, #ea2d21, #b92020, #620606);
+}
+.btm-bg .winners .info span {
+    font-weight: 800;
+    padding: 0 0 0 8px;
+    background: #FEDB01;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.btm-bg .footer {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    padding-bottom: 10px;
+}
+
+
+#scrollTop {
+    display: none;
+    position: fixed;
+    right: 26px;
+    bottom: 26px;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    border-radius: 100px;
+    cursor: pointer;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 200;
+}
+#scrollTop.active {
+    background-color: #2250FC;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: inherit;
+    }
+
+
+    .top-bg {
+        background-image: var(--mobile-top);
+    }
+    .top-bg .bp-logo {
+        top: 67%;
+        right: 0%;
+        bottom: 0;
+    }
+    .top-bg .pp-logo {
+        top: 40%;
+        left: 0;
+    }
+    .top-bg .text02 {
+        margin-top: 44% !important;
+    }
+
+
+    .claim-form .form-container .err-msg-container {
+        font-size: 12px !important;
+    }
+
+
+    .mid-bg {
+        background-image: var(--mobile-mid);
+    }
+    .mid-bg .text03 {
+        font-family: 'Poppins';
+        font-weight: bold;
+        color: #fff;
+        line-height: 2;
+    }
+    .mid-bg .text04,
+    .mid-bg .text05 {
+        font-family: 'Poppins';
+        color: #fff;
+        font-weight: 600;
+        line-height: 1.5;
+        letter-spacing: 1px;
+    }
+    .mid-bg .btn-claim img {
+        width: 65%;
+    }
+    .btm-bg .footer {
+        left: auto;
+        padding-bottom: 0;
+    }
+
+
+    .btm-bg {
+        background-image: var(--mobile-btm);
+    }
+    .btm-bg .text02 {
+        color: #fff;
+        padding: 10px;
+        font-weight: 600;
+    }
+}

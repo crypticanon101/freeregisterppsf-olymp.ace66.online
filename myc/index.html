@@ -1,0 +1,361 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="csrf-token" content="6hKDBMpnv53VeH7iuDaTZ0BVYeSsTVaGR15UwDx2">
+
+    
+        
+    
+    <title>ACE66 - PROMOTION</title>
+
+    
+    <link rel="icon" href="images/ace-favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Poppins">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/trajan-pro">
+
+    
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/mobile-detect.min.js"></script>
+
+    
+    <link rel="stylesheet" href="css/all.min.css">
+    <script src="js/all.min.js"></script>
+
+    
+    <link rel="stylesheet" href="css/bootstrap-5.2.3.min.css">
+    <script src="js/bootstrap-5.2.3.min.js"></script>
+
+    
+    <script src="js/sweetalert2.all.min.js"></script>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/plugins.js"></script>
+    <script src="js/api.js"></script>
+
+    
+    <script src="js/func.js"></script>
+
+    <style>
+        :root {
+            --desktop-top : url(images/top-bg-upv2.png);
+            --desktop-mid : url(images/mid-bg-up.png);
+            --desktop-btm : url(images/btm-bg-up.png);
+            --phone-frame : url(images/phone.png);
+            --mobile-top  : url(images/top-bg-mupv2.png);
+            --mobile-btm  : url(images/btm-bg-mup.png);
+            --mobile-mid  : url(images/mid-bg-mup.png);
+        }
+    </style>
+    <script>
+        const lang    = 'zh';
+        const country = 'my';
+        const version   = 'v2';
+        const site_name = 'ACE66';
+    </script>
+
+    
+    <link rel="stylesheet" href="css/custom.css">
+    <link href="css/custom_1.css" rel="stylesheet">
+    <script src="js/custom.js"></script>
+</head>
+<body>
+        
+            <div class="contact-us">
+    <div id="top-banner" class="redirect-banner-container ">
+        <div class="top-banner-container">
+            <div class="bp-icon">
+                <div class="icon-img contact-us-icon-color">
+                    <img src="images/ACE66-logo.png">
+                </div>
+            </div>
+            <div class="col-4 redirect-text">
+                <p class="m-0 ">正在寻找我们的主页？</p>
+            </div>
+            <div class="col-3 p-0 m-auto d-flex justify-content-center">
+                <div id="redirect" class="d-flex flex-nowrap align-items-center justify-content-center text-center ml-auto redirect-button redirect-button-color">
+                    <div class="redirect-banner redirect-button-text-color">前往 ACE66</div>
+                    <input type="hidden" name="site_name" value="ACE66">
+                    <input type="hidden" name="site_prefix" value="ACE">
+                </div>
+            </div>
+            <div class="col-2 ml-2 p-0 ">
+                <span id="close-button" class="redirect-banner-close">×</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-side-panel contact-zh d-flex flex-nowrap  ">
+        <div id="contact-us-close-button" class="contact-us-close-button ">X</div>
+            <div class="d-flex flex-nowrap align-items-center">
+                <p class="">需要帮忙？</p>
+                <div class="content-container">
+                    <div class="contact-content">
+                        <a id="live-chat"><img class="contact-us-icon" src="images/livechat.png" alt="Live Chat Icon" title="Live Chat"></a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const redirectButton = document.getElementById('redirect');
+        const closeButton = document.getElementById('close-button');
+        const topBanner = document.getElementById('top-banner');
+        const liveChat = document.getElementById('live-chat');
+        const contactUsCloseButton = document.getElementById('contact-us-close-button');
+
+        var contactPanel = document.querySelector('.contact-side-panel');
+        var contactContainer = document.querySelector('.content-container');
+        var contactContents = document.querySelectorAll('.contact-content');
+        var bodyInner = document.querySelector('.body-inner');
+
+        var country = $('[name="country"]').val();
+        var lang = $('[name="lang"]').val();
+        var siteName = $('[name="site_name"]').val();
+        var sitePrefix = $('[name="site_prefix"]').val();
+
+        handleResize();
+
+        redirectButton.addEventListener('click', function(e) {
+            var queryString = new URLSearchParams(window.location.search);
+            var platform = "";
+            var md = new MobileDetect(window.navigator.userAgent);
+
+            if (md.mobile()) {
+                platform = "M";
+            } else {
+                platform = "D";
+            }
+            function getParameterByName(param) {
+            const url = new URL(window.location);
+            const params = new URLSearchParams(url.search); // Extract search parameters
+            // Accessing specific parameter values
+            return params.get(param).toUpperCase();
+          }
+
+          const redirectURL = `https://m.ace66.com/?lang=${getParameterByName(
+            "country"
+          )}_${getParameterByName("lang")}`;
+
+          window.location.href = redirectURL;
+           
+        })
+
+
+        closeButton.addEventListener('click', function() {
+            topBanner.style.display = 'none';
+            bodyInner.style.marginTop = '0';
+        })
+
+        contactUsCloseButton.addEventListener('click', function() {
+            contactPanel.style.setProperty('display', 'none', 'important');
+        })
+
+                    liveChat.addEventListener('click', function() {
+    idStack = {
+        I22: {
+            MY: {
+                EN: 73,
+                ZH: 73,
+            },
+            SG: {
+                EN: 74,
+                ZH: 74
+            }
+        },
+        K3: {
+            MY: {
+                EN: 75,
+                ZH: 75,
+            },
+            SG: {
+                EN: 76,
+                ZH: 76
+            }
+
+        },
+        ACE: {
+            MY: {
+                EN: 77,
+                ZH: 77,
+            },
+            SG: {
+                EN: 78,
+                ZH: 78
+            }
+        },
+        S66: {
+            MY: {
+                EN: 79,
+                ZH: 79,
+            },
+            SG: {
+                EN: 80,
+                ZH: 80
+            }
+        }
+    }
+
+    var groupId = idStack[sitePrefix][country.toUpperCase()][lang.toUpperCase()];
+    var liveChatURL = "https://secure.livechatinc.com/licence/10515072/v2/open_chat.cgi?group=" + groupId;
+
+    window.location.href = liveChatURL;
+})        
+        function handleResize() {
+            var imageCount = contactContents.length;
+            var img = contactContents[0].querySelector('img');
+            var imageComputedStyle = window.getComputedStyle(img);
+            var imageHeight = parseFloat(imageComputedStyle.width) + 8;
+            var totalHeight = imageCount * imageHeight;
+            contactPanel.style.height = totalHeight + 'px';
+            bodyInner.style.marginTop = topBanner.clientHeight - 1 + 'px';
+        }
+        window.addEventListener("resize", handleResize);
+    })
+</script>
+        
+    
+    <div id="home-container" class="body-inner position-relative">
+        <div class="container text-center m-0 claim-form" style="display: none;" id="form">
+            <!--<p class="text-center m-0 text03">输入您的详细信息</p>
+            <p class="text-center m-0 text03b">以索取您的</p>-->
+            <p class="text-center m-0 text04">一天三五千 一个月十来万<span></span></p>
+            <form id="register-form" class="form-container">
+               
+                <div id="section_1">
+                    <input type="text" name="username" id="username" class="form-control" oninput="dynamicInputValidation(event, 12, 'MY')" onblur="validateUsername(event,12)" placeholder="用户名" required="">
+                    <div id="div__err-msg-username" class="flex-column d-none mb-1 err-msg-container">
+                        <p class="p__username-minmax d-flex align-items-center justify-content-between mb-0">6至16个字符</p>
+                        <p class="p__username-special d-flex align-items-center justify-content-between mb-0">不允许使用特殊字符</p>
+                        <p class="p__username-alphanum-or-alpha d-flex align-items-center justify-content-between mb-0 text-left">由字母和数字或字母组成</p>
+                    </div>
+                    <div id="div__err-msg-username-duplicate" class="flex-column d-none mb-2 err-msg-container">
+                        <p class="p__username-duplicate d-flex align-items-center justify-content-between mb-0">该用户名已被使用</p>
+                    </div>
+
+                    <input type="password" name="password" id="password" class="form-control" oninput="dynamicInputValidation(event, 12, 'MY'); document.getElementById('password_confirmation').value = this.value;" placeholder="密码" required="">
+                    <div id="div__err-msg-password" class="flex-column d-none mb-1 err-msg-container">
+                        <p class="p__password-min d-flex align-items-center justify-content-between mb-0">至少6个字符</p>
+                    </div>
+
+                    <input type="hidden" name="password_confirmation" id="password_confirmation">
+                    <div id="div__err-msg-password_confirmation" class="flex-column d-none mb-1 err-msg-container" style="display: none;">
+                        <p class="p__password_confirmation-not-matched d-flex align-items-center justify-content-between mb-0">密码不匹配</p>
+                    </div>
+
+                    <input type="text" name="mobile_number" id="mobile_number" class="form-control" oninput="dynamicInputValidation(event, 12, 'MY')" placeholder="手机号码" required="">
+                    
+                    <div
+                    class="mb-1 d-flex err-msg-container p__password_confirmation-not-matched d-none"
+                    id="message"
+                  ></div>
+                    
+                </div>
+
+                <button type="submit" id="register" class="btn-claim">免费注册!</button>
+            </form>
+        </div>
+
+        <section id="home" class="position-relative top-bg">
+            <img class="position-absolute specialcase gem-1 v2 " src="images/gem-1.png" style="display: none;">
+            <img class="position-absolute floating135 gem-2 v2 " src="images/gem-2.png" style="display: none;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img class="gop-logo" src="images/gates-of-olympus-logo.png">
+                    </div>
+                </div>
+                <div class="col-12 text-center">
+                    <p class="m-0"> </p>
+                </div>
+                <div class="row">
+                    <div class="col-5 p-0 position-relative">
+                        <img class="position-absolute bp-logo" src="images/ace-logo.png">
+                    </div>
+                    <div class="col-2 p-0 text-center">
+                        <p class="m-0 text01">赞助</p>
+                        <p class="m-0 text02">X</p>
+                    </div>
+                    <div class="col-5 p-0 position-relative">
+                        <img class="position-absolute pp-logo" src="images/pp-logo.png">
+                    </div>
+                </div>
+                <div class="row content desktop">
+                    <div class="col-6 position-relative">
+                        <img class="position-absolute text-apng" src="images/title-text-zh.png" style="display: none;">
+                    </div>
+                    <div class="col-6"></div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="position-relative mid-bg" style="display: none;">
+            <img class="position-absolute floating135 coin-1 desktop v2 " src="images/coin-1.png">
+            <img class="position-absolute specialcase coin-2 desktop" src="images/coin-2.png">
+            <div class="container text-center">
+                <div class="text-center text01">
+                                                            充值最低RM50即可领取
+                                    </div>
+                                <div class="text-center m-0 text02">免费注册</div>
+                
+                                    <div class="text-center mb-3 text03">有机会赢得巨额奖金！</div>
+                    <div class="text-center text04">奖金将立即存入您的账号抓住这个机会，现在就玩</div>
+                                <div class="text-center text05"></div>
+                <div class="text-center mt-3 phone-bg">
+                    <div class="phone-screen" style="overflow: hidden;">
+                        <video width="100%" id="gamevideo" autoplay="" loop="" muted="" playsinline="">
+                            <source type="video/mp4" src="media/gool-game-video.mp4">
+                        </video>
+                    </div>
+                </div>
+                <button type="button" class="mt-0 btn-claim" id="autoScrollToForm">免费注册!</button>
+            </div>
+        </section>
+
+        <section class="position-relative btm-bg" style="display: none;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center text01">
+                        <p>您甚至可以成为<span>千万富翁</span>  :</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center mt-3 mb-5 winners">
+                        <span class="wrapper winners-2">
+                            <img src="images/ace66-winner-2-my-zh.png">
+                            <!--<div class="text-center info">黄家乐<span>MYR 238,000</span></div>-->
+                        </span>
+                        <span class="wrapper winners-1">
+                            <img src="images/ace66-winner-1-my-zh.png">
+                            <!--<div class="text-center info">indra ravindran a/p p.ravi<span>MYR 466,000</span></div>-->
+                        </span>
+                        <!--<span class="wrapper winners-3">
+                            <img src="images/ace66-winner-4-my-zh.jpg">
+                            <div class="text-center info">吴绣梅<span>MYR 147,000</span></div>
+                        </span>-->
+                    </div>
+                </div>
+                <div class="row footer"> 
+                    <div class="col-12 text-center mt-1 text02" style="font-weight: 600;">
+                        Copyright ©  <span id="current-year"></span> ACE66。版权所有。
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    
+    <button type="button" id="scrollTop">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+
+    <script src="https://rmedia-offerpage.vercel.app/api/offer/v2/submit"></script>
+
+
+
+</body></html>

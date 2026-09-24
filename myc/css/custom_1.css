@@ -1,0 +1,272 @@
+.contact-us p,
+.contact-us {
+    font-family: "Poppins";
+    color: white;
+    font-size: 14px;
+    line-height: 1.2;
+}
+#top-banner {
+    position: fixed;
+    top: 0;
+}
+.top-banner-container {
+    margin: 0;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 100%;
+    display: flex;
+}
+.icon-img {
+    margin-left: auto;
+    margin-right: 1rem !important;
+}
+.redirect-banner-container {
+    background: #333333;    
+    color: #fff;
+    font-size: 12px;
+    font-family: "Poppins";
+    line-height: 1.2;
+    z-index: 300;
+    width: 100%;
+    height: 56px;
+}
+
+.redirect-banner-container-red {
+    background: #B92020;    
+    color: #fff;
+    font-size: 12px;
+    font-family: "Poppins";
+    line-height: 1.2;
+    z-index: 300;
+    width: 100%;
+    height: 56px;
+}
+
+.redirect-banner-container .redirect-text, .redirect-banner-container-red .redirect-text {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 !important;
+}
+
+.redirect-banner-container .redirect-banner-close, .redirect-banner-container-red .redirect-banner-close {
+    font-size: 30px;
+    color: white;
+    height: fit-content;
+    cursor: pointer;
+}
+
+.redirect-banner-container .redirect-banner-a, .redirect-banner-container-red .redirect-banner-a {
+    color: #fff;
+    background: linear-gradient(90deg, #0066ca 0%, #1f86ea 100%);
+    border-radius: 5px;
+    width: 95px;
+    height: 28px;
+    line-height: 25px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.redirect-banner-container .contact-us-icon, .redirect-banner-container-red .contact-us-icon {
+    padding-left: 4px;
+    padding-top: 4px;
+    margin-top: 6px;
+    margin-left: 4px;
+    width: 46px;
+    height: 44px;
+}
+
+.redirect-button {
+    width: 50%;
+    height: 40px;
+    border-radius: 3px;
+    font-size: 14px;
+    margin-left: auto;
+}
+
+.redirect-button-color {
+    background: linear-gradient(#EA2D21, #B92020 , #620606);
+}
+
+.redirect-button-color-yellow {
+    background: linear-gradient(#EEAF23, #FEE88C, #FFE55B);
+}
+
+.redirect-button-text-color {
+    color: white;
+}
+
+.redirect-button-text-color-yellow {
+    color: #2E1C02;
+    font-weight: 600;
+    /* font-size: 14px; */
+    font-family: 'Montserrat';
+}
+
+.font-montserrat {
+    font-family: 'Montserrat' !important;
+}
+
+.red-bg {
+    background: #B92020 !important;
+}
+
+.red-cross {
+    color: #B92020 !important;
+}
+
+.icon-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background: linear-gradient(270deg, #2086ea 0%, #0066c9 100%);
+}
+.icon-img img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    padding: 5px;
+}
+.bp-icon {
+    margin-left: 5vw;
+    padding: 0;
+    flex: 0 0 auto;
+    width: 16.66666667%;
+}
+
+.contact-side-panel {
+    min-height: 160px;
+    height: 160px;
+    width: 75px;
+    position: fixed;
+    top: 16%;
+    /* overflow: hidden; */
+    right: 0;
+    background: #3E4144;
+    padding: 2px 0.8rem;
+    white-space: nowrap;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    z-index: 10;
+    box-shadow: 0px 3px 6px #00000099;
+}
+
+.contact-side-panel p {
+    color: #fff;
+    font-size: 16px;
+    margin: 0 13px;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg) translate(0, 0);
+    text-align: center;
+    height: 100%;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.contact-zh p {
+    transform: rotate(0deg) translate(0, 0);
+}
+
+.contact-zh:hover p {
+    transform: rotate(0deg) translate(50px, 0) !important;
+}
+
+.contact-side-panel:hover p {
+    transform: rotate(180deg) translate(-50px, 0);
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.contact-content {
+    transform: translate(60px, 0px);
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.contact-us-icon {
+    width: 45px;
+    margin: 2.5px 0px;
+}
+
+.contact-us-icon-color {
+    background: linear-gradient(#454141, #202020);
+}
+
+.contact-side-panel:hover .contact-content {
+    transform: translate(-45px, 0px);
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.scrollable-sidebar {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100px;
+}
+
+.contact-us-close-button {
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: -15px;
+    right: 0px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.redirect-button,
+#live-chat {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 992px) {
+    .redirect-button {
+        width: 100%;
+    }
+    .redirect-text {
+        font-size: 14px !important;
+    }
+
+    .contact-us-icon {
+        width: 35px;
+        margin: 2.5px 0px;
+    }
+    .contact-side-panel {
+        width: 50px;
+        padding: 2px 0.2rem;
+        z-index: 999;
+    }
+    .contact-side-panel p {
+        font-size: 14px;
+    }
+    .contact-side-panel:hover .contact-content {
+        transform: translate(-38px, 0px);
+    }
+    .redirect-button {
+        font-size: 11px;
+    }
+    .contact-us p,
+    .contact-us {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .contact-us p,
+    .contact-us {
+        font-size: 12px;
+    }
+}
