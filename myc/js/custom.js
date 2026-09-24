@@ -9,7 +9,7 @@ $(document).ready(function() {
         let topbgwid = mobile ?  400 : 1920;
         let topbghei = mobile ?  945 : 1200;
         let midbgwid = mobile ?  414 : 1920;
-        let midbghei = mobile ?  660 : 1000;
+        let midbghei = mobile ?  450 : 850; //660 : 1000
         let btmbgwid = mobile ?  260 : 1920;
         let btmbghei = mobile ?  550 : 1000;
         let ratio    = bodywid / topbgwid;
@@ -121,7 +121,7 @@ $(document).ready(function() {
             'height'    : `${ratio * 38}px`,
             'margin'    : `${ratio * 10}px 0 0`,
         });
-        let text03_size = lang == 'id' ? 23 : (mobile ? 25 : 30);
+        let text03_size = lang == 'id' ? 23 : (mobile ? 20 : 25);
         let text03b_size = lang == 'id' ? (mobile ? 29 : 30) : (mobile ? 32 : 39);
         $('.claim-form .text03').css({
             'font-size' : `${claimformratio * text03_size}px`,
@@ -131,13 +131,13 @@ $(document).ready(function() {
         });
         let text04_size = (mobile ? (version == 'v5' ? 60 : 65) : (version == 'v5' ? 68 : 72));
         if (lang == 'zh') {
-            text04_size = 45;//60
+            text04_size = 40;//60
         } else if (lang == 'id') {
-            text04_size = 38;//48
+            text04_size = 40;//48
         }
         $('.claim-form .text04').css({
             'font-size'  : `${claimformratio * text04_size}px`,
-            'height'     : lang == 'zh' || lang == 'th' || lang == 'hi'  ? `${claimformratio * 169}px` : '',//169
+            'height'     : lang == 'zh' || lang == 'th' || lang == 'hi'  ? `${claimformratio * 110}px` : '',//169
             'line-height': lang == 'zh' || lang == 'th' || lang == 'hi' || lang == 'bn' ? 1.1 : '',
         });
         $('.claim-form .text04 span').css({
@@ -160,7 +160,7 @@ $(document).ready(function() {
         $('.mid-bg').css({
             'height'    : `${ratio * midbghei}px`,
             'margin'    : `${ratio * -2}px 0`,
-            'padding'   : mobile ? `${ratio * 160}px ${ratio *  10}px 0` : `${ratio * 95}px ${ratio *  20}px 0`,
+            'padding'   : mobile ? `${ratio * 60}px ${ratio *  10}px 0` : `${ratio * 95}px ${ratio *  20}px 0`, //160
         });
         $('.mid-bg .content').css({
             'margin-top'    : mobile ? `${ratio * 80}px` : 0,
