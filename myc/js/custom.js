@@ -86,7 +86,7 @@ $(document).ready(function() {
         });
         let textapngtop = lang == 'th' ? 310 : 335;
         $('.top-bg .text-apng').css({
-            'top'       : mobile ? `${ratio * textapngtop}px` : `${ratio * 490}px`,
+            'top'       : mobile ? `${ratio * textapngtop}px` : `${ratio * 590}px`,
             'left'      : mobile ?         `${ratio *  75}px` :                 '',
             'right'     : mobile ?                         '' : `${ratio * 120}px`,
             'width'     : mobile ?         `${ratio * 260}px` : `${ratio * 421}px`,
